@@ -2,6 +2,8 @@ apiVersion: v1alpha1
 kind: Fleet
 metadata:
   name: test-templating-main
+  annotations:
+    foo: bar
 spec:
   selector:
     matchLabels:
@@ -13,7 +15,7 @@ spec:
         new: label-1
     spec:
       os:
-        image: quay.io/sserafin/flightctl-agent-centos:v3 
+        image: quay.io/sserafin/flightctl-agent-centos:v4
       config: []
       resources:
         - monitorType: CPU
